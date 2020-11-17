@@ -11,9 +11,9 @@ int main() {
 	receiver3 = new Receiver();
 	Transmitter* transmitter;
 	transmitter = new Transmitter();
-	receiver1->connectToTransmitter(transmitter);
+	receiver1->connectTo(transmitter);
+	receiver2->connectTo(transmitter);
 	cout << *receiver1;
 	transmitter->sendMessage("aaaa");
 	cout << *receiver1;
-	cout << *receiver2;
 }

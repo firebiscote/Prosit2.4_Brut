@@ -1,4 +1,3 @@
-
 #include "Receiver.h"
 
 using namespace std;
@@ -6,7 +5,7 @@ using namespace std;
 Receiver::Receiver() : _message("") {
 }
 
-void Receiver::connectToTransmitter(Transmitter* transmitter) {
+void Receiver::connectTo(Transmitter* transmitter) {
 	transmitter->set_method(&Receiver::set_message);
 	transmitter->addReceiver(this);
 }

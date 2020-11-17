@@ -12,6 +12,6 @@ public:
 	void addReceiver(Receiver* receiver);
 	void set_method(void (Receiver::* method)(std::string));
 private:
+	Sub* sub;
 	void (Receiver::* _method)(std::string);
-	std::vector<Receiver*> _receivers;
 };
