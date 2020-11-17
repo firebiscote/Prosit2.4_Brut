@@ -12,7 +12,7 @@ void Transmitter::sendMessage(string messageToSend) {
 	}
 }
 
-void Transmitter::addReceiver(Receiver *receiver) {
+void Transmitter::addReceiver(Receiver* receiver) {
 	_receivers.push_back(receiver);
 }
 

@@ -1,3 +1,4 @@
+
 #include "Receiver.h"
 
 using namespace std;
@@ -18,4 +19,3 @@ ostream& operator<< (ostream& flux, Receiver const& receiver) {
 	flux << receiver._message << endl;
 	return flux;
 }
-
