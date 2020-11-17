@@ -10,15 +10,12 @@ void Receiver::connectToTransmitter(Transmitter* transmitter) {
 	transmitter->addReceiver(this);
 }
 
-void Receiver::doAThing() {
-	cout << _message << endl;
-}
-
-string Receiver::get_message() {
-	return _message;
-}
-
 void Receiver::set_message(string message) {
 	_message = message;
+}
+
+ostream& operator<< (ostream& flux, Receiver const& receiver) {
+	flux << receiver._message << endl;
+	return flux;
 }
 

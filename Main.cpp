@@ -9,14 +9,10 @@ int main() {
 	receiver2 = new Receiver();
 	receiver3 = new Receiver();
 	Transmitter *transmitter;
-	transmitter = new Transmitter("salut");
+	transmitter = new Transmitter();
 	receiver1->connectToTransmitter(transmitter);
-	receiver2->connectToTransmitter(transmitter);
-	receiver1->doAThing();
-	receiver2->doAThing();
-	receiver3->doAThing();
-	transmitter->sendMessage();
-	receiver1->doAThing();
-	receiver2->doAThing();
-	receiver3->doAThing();
+	cout << *receiver1;
+	transmitter->sendMessage("aaaa");
+	cout << *receiver1;
+	cout << *receiver2;
 }
