@@ -17,6 +17,16 @@ void Transmitter::addReceiver(Receiver* receiver) {
 	_receivers.push_back(receiver);
 }
 
+void Transmitter::delReceiver(Receiver* receiver) {
+	for (int i = 0; i < _receivers.size(); i++) {
+		if (receiver == _receivers[i]) {
+			delete _receivers[i];
+			_receivers.erase(_receivers.begin() + i);
+			break;
+		}
+	}
+}
+
 void Transmitter::set_method(void (Receiver::* method)(string)) {
 	_method = method;
 }

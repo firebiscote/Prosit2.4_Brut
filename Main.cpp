@@ -20,4 +20,7 @@ int main() {
 	cout << *receiver2;
 	transmitter->sendMessage("m4");
 	cout << *receiver1 << "\n" << *receiver2;
+	receiver1->disconnectOf(transmitter);
+	transmitter->sendMessage("m5");
+	cout << *receiver1;
 }

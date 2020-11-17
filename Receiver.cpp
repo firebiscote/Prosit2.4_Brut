@@ -15,7 +15,7 @@ void Receiver::connectTo(Transmitter* transmitter) {
 }
 
 void Receiver::disconnectOf(Transmitter* transmitter) {
-
+	transmitter->delReceiver(this);
 }
 
 void Receiver::set_message(string message) {

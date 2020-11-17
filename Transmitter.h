@@ -10,6 +10,7 @@ public:
 	Transmitter();
 	void sendMessage(std::string message);
 	void addReceiver(Receiver *receiver);
+	void delReceiver(Receiver* reciever);
 	void set_method(void (Receiver::*method)(std::string));
 	std::vector<std::string>* get_transmission();
 private:
