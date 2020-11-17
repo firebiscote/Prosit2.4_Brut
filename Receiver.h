@@ -4,11 +4,6 @@
 #include <iostream>
 #include <string>
 
-typedef struct {
-	Transmitter* transmitter;
-	std::vector<Receiver*> subscibers;
-} Sub;
-
 class Receiver {
 public:
 	Receiver();

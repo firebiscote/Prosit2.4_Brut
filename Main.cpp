@@ -16,4 +16,5 @@ int main() {
 	cout << *receiver1;
 	transmitter->sendMessage("aaaa");
 	cout << *receiver1;
+	cout << *receiver2;
 }
