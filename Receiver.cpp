@@ -6,8 +6,8 @@ Receiver::Receiver() : _message("") {
 }
 
 void Receiver::connectToTransmitter(Transmitter* transmitter) {
-	void (Receiver:: *method)(string) = &Receiver::set_message;
-	transmitter->addReceiver(method);
+	transmitter->set_method(&Receiver::set_message);
+	transmitter->addReceiver(this);
 }
 
 void Receiver::doAThing() {

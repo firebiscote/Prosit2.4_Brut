@@ -14,7 +14,9 @@ int main() {
 	receiver2->connectToTransmitter(transmitter);
 	receiver1->doAThing();
 	receiver2->doAThing();
+	receiver3->doAThing();
 	transmitter->sendMessage();
 	receiver1->doAThing();
 	receiver2->doAThing();
+	receiver3->doAThing();
 }

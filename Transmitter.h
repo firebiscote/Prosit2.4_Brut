@@ -2,15 +2,18 @@
 
 #include "Receiver.h"
 #include <vector>
+#include <string>
 
 class Transmitter {
 public:
 	Transmitter(std::string messageToSend);
 	void sendMessage();
-	void addReceiver(void (Receiver::*method)(std::string));
+	void addReceiver(Receiver *receiver);
 	std::string get_messageToSend();
 	void set_MessageToSend(std::string messageToSend);
+	void set_method(void (Receiver::*method)(std::string));
 private:
 	std::string _messageToSend;
-	std::vector<void (Receiver::*)(std::string)> _receiver;
+	void (Receiver::*_method)(std::string);
+	std::vector<Receiver*> _receivers;
 };
