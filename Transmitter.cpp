@@ -10,6 +10,7 @@ void Transmitter::sendMessage(string messageToSend) {
 	for (int i = 0; i < _receivers.size(); i++) {
 		((*_receivers[i]).*_method)(messageToSend);
 	}
+	_transmission.push_back(messageToSend);
 }
 
 void Transmitter::addReceiver(Receiver* receiver) {
@@ -18,4 +19,8 @@ void Transmitter::addReceiver(Receiver* receiver) {
 
 void Transmitter::set_method(void (Receiver::* method)(string)) {
 	_method = method;
+}
+
+vector<string>* Transmitter::get_transmission() {
+	return &_transmission;
 }
