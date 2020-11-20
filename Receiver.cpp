@@ -24,7 +24,8 @@ void Receiver::set_message(string message) {
 
 ostream& operator<< (ostream& flux, Receiver const& receiver) {
 	for (int i = 0; i < receiver._message.size(); i++) {
-		flux << receiver._message[i] << endl;
+		flux << receiver._message[i] << "  ";
 	}
+	flux << endl;
 	return flux;
 }
